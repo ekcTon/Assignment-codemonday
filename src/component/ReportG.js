@@ -5,7 +5,9 @@ import FetchG from './FetchG'
 function ReportG() {
     return(
         <div className="flex justify-center">
-            <div><FetchG /></div>
+            <div>
+                <FetchG />
+            </div>
         </div>
     )
 }
