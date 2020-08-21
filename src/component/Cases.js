@@ -11,7 +11,9 @@ function Cases(props) {
                 <p>Total: {props.Confirmed.TotalConfirmed}</p>
                 <p>New: +{props.Confirmed.NewConfirmed}</p>
             </div>
-            <Border1 />
+            <div className="w-full justify-center px-8 pt-2">
+                <Border1 />
+            </div>
         </div>
     )
 }

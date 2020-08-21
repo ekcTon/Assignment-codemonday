@@ -3,10 +3,10 @@ import '../asset/codestyle.css'
 
 function Recover(props) {
     return(
-        <div className="flex-col text-center text-lg sm:text-xl text-gray-100">
+        <div className="flex-col text-center text-lg sm:text-xl text-gray-100 px-6">
             <p>Recovered</p>
-            <p>Total: {props.TotalRecovered}</p>
-            <p>New: +{props.NewRecovered}</p>
+            <p>Total: {props.Recovered.TotalRecovered}</p>
+            <p>New: +{props.Recovered.NewRecovered}</p>
         </div>
     )
 }

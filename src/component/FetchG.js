@@ -3,6 +3,8 @@ import '../asset/codestyle.css'
 import Date from './Date'
 import Cases from './Cases'
 import Recovered from './Recovered'
+import Death from './Death'
+import Border1 from './Border-1'
 
 export class FetchG extends Component {
     constructor(props) {
@@ -34,12 +36,9 @@ render() {
                     <Cases Confirmed={items.Global}/>
                     <div className="flex-col justify-center pt-2 sm:pt-4">
                         <div className="flex justify-center">
-                        <Recovered Recovered={items.Global} />
-                            <div className="flex-col text-center text-lg sm:text-xl text-gray-100">
-                                <p>Death</p>
-                                <p>Total: </p>
-                                <p>New: +</p>
-                            </div>
+                            <Recovered Recovered={items.Global} />
+                            <Border1 />
+                            <Death Death={items.Global} />
                         </div>
                     </div>
                     <div className="flex-col">
