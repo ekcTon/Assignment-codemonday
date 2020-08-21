@@ -1932,7 +1932,7 @@ video {
 }
 
 .bg-red-600 {
-  --bg-opacity: 1;
+  --bg-opacity: 0.5;
   background-color: #e53e3e;
   background-color: rgba(229, 62, 62, var(--bg-opacity));
 }
