@@ -623,6 +623,11 @@ video {
   width:100%;
   height:600px;
 }
+.img-bg-mid{
+  background: url("./img/hospital.jpg");
+  width:100%;
+  height:650px;
+}
 .font-GG{
   font-family: 'Rubik', sans-serif;
 }
