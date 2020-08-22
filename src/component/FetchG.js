@@ -41,17 +41,6 @@ render() {
                             <Death Death={items.Global} />
                         </div>
                     </div>
-                    <div className="flex-col">
-                        <div className="w-full">
-                            {/* <div className="flex justify-center pt-2 sm:pt-4">
-                                <div className="flex-col text-center text-lg sm:text-xl text-gray-100">
-                                    <p>Cases</p>
-                                    <p>Total: </p>
-                                    <p>New: +2135</p>
-                                </div>
-                            </div> */}
-                        </div>
-                    </div>
                 </div>
                 
             );
