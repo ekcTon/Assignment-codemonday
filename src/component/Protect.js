@@ -1,10 +1,7 @@
 import React from 'react'
 import '../asset/codestyle.css'
-// import Mask from '../asset/img/patient.png'
 import Firstpro from './Mask'
-// import Wash from '../asset/img/hand-wash.png'
 import Secondpro from './Wash'
-// import Distance from '../asset/img/distance.png'
 import Thirdpro from './Distance'
 
 function Protect() {

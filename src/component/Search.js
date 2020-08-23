@@ -2,12 +2,9 @@ import React from 'react'
 import '../asset/codestyle.css'
 
 function Search() {
-    search = (keyword) => {
-
-    }
     return(
-        <div>
-            <input >
+        <div className="py-4">
+            <input className="w-full border-solid text-xl" placeholder="Search"/>
         </div>
     )
 }

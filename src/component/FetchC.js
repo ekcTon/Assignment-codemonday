@@ -7,6 +7,7 @@ import Newdeath from './NewDeaths'
 import Totaldeath from './TotalDeaths'
 import Newrecover from './NewRecov'
 import Totalrecover from './TotalRecov'
+import Search from './Search'
 
 export class FetchC extends Component {
     state = {
@@ -27,34 +28,37 @@ export class FetchC extends Component {
             return <div>can't get</div>
         }
         return(
-            <div class="table-responsive-sm">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Country</th>
-                            <th scope="col">New Cases</th>
-                            <th scope="col">Total Cases</th>
-                            <th scope="col">New Deaths</th>
-                            <th scope="col">Total Deaths</th>
-                            <th scope="col">New Recovered</th>
-                            <th scope="col">Total Recovered</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {this.state.list.map(item=>(
-                        <tr>
-                            <Countryname ListC={item.Country}/>
-                            <Newcon ConfirmeC={item.NewConfirmed}/>
-                            <Totalcon TotalconfirmeC={item.TotalConfirmed}/>
-                            <Newdeath Newdea={item.NewDeaths}/>
-                            <Totaldeath Totaldea={item.TotalDeaths}/>
-                            <Newrecover Newrecov={item.NewRecovered}/>
-                            <Totalrecover Totalrecov={item.TotalRecovered}/>
-                        </tr>
-                    ))}
-                        
-                    </tbody>
-                </table>
+            <div>
+                 <Search />
+                 <div class="table-responsive-sm">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Country</th>
+                                <th scope="col">New Cases</th>
+                                <th scope="col">Total Cases</th>
+                                <th scope="col">New Deaths</th>
+                                <th scope="col">Total Deaths</th>
+                                <th scope="col">New Recovered</th>
+                                <th scope="col">Total Recovered</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {this.state.list.map(item=>(
+                            <tr>
+                                <Countryname ListC={item.Country}/>
+                                <Newcon ConfirmeC={item.NewConfirmed}/>
+                                <Totalcon TotalconfirmeC={item.TotalConfirmed}/>
+                                <Newdeath Newdea={item.NewDeaths}/>
+                                <Totaldeath Totaldea={item.TotalDeaths}/>
+                                <Newrecover Newrecov={item.NewRecovered}/>
+                                <Totalrecover Totalrecov={item.TotalRecovered}/>
+                            </tr>
+                        ))}
+                            
+                        </tbody>
+                    </table>
+                </div>
             </div>
         )
     }
