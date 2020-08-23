@@ -4,7 +4,7 @@ import '../asset/codestyle.css'
 function Search() {
     return(
         <div className="py-4">
-            <input className="w-full border-solid text-xl" placeholder="Search"/>
+            <input className="w-full border-solid text-xl px-4 py-4" placeholder="Search"/>
         </div>
     )
 }
