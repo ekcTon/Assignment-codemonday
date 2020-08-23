@@ -4,7 +4,7 @@ import Background from './Background'
 import Protect from './Protect'
 import Backgroundmid from './Backgroundmid'
 import ReportC from './ReportC'
-import FetchC from './FetchC'
+// import FetchC from './FetchC'
 
 function App() {
     return(
@@ -13,7 +13,7 @@ function App() {
             <Protect />
             <Backgroundmid />
             <ReportC />
-            <FetchC />
+            {/* <FetchC /> */}
         </div>
     )
 }

@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
 import '../asset/codestyle.css'
+import Countryname from './Countryname'
+import Newcon from './NewConfirmed'
+import Totalcon from './TotalConfirmed'
+import Newdeath from './NewDeaths'
+import Totaldeath from './TotalDeaths'
+import Newrecover from './NewRecov'
+import Totalrecover from './TotalRecov'
 
 export class FetchC extends Component {
     state = {
@@ -20,66 +27,37 @@ export class FetchC extends Component {
             return <div>can't get</div>
         }
         return(
-            <div>
-                {this.state.list.map(item=>(
-                    <div>
-                        <div>{item.Country}</div>
-                        <div>{item.NewConfirmed}</div>
-                        <div>{item.TotalConfirmed}</div>
-                        <div>{item.NewDeaths}</div>
-                        <div>{item.TotalDeaths}</div>
-                        <div>{item.NewRecovered}</div>
-                        <div>{item.TotalRecovered}</div>
-                    </div>
-                    
-
-                ))}
-                {/* {this.state.loading || !this.state.list ? (
-                    <div>loading...</div>
-                ) : (
-                // <div>{list.Country}</div>
-                
-                )} */}
+            <div class="table-responsive-sm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Country</th>
+                            <th scope="col">New Cases</th>
+                            <th scope="col">Total Cases</th>
+                            <th scope="col">New Deaths</th>
+                            <th scope="col">Total Deaths</th>
+                            <th scope="col">New Recovered</th>
+                            <th scope="col">Total Recovered</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {this.state.list.map(item=>(
+                        <tr>
+                            <Countryname ListC={item.Country}/>
+                            <Newcon ConfirmeC={item.NewConfirmed}/>
+                            <Totalcon TotalconfirmeC={item.TotalConfirmed}/>
+                            <Newdeath Newdea={item.NewDeaths}/>
+                            <Totaldeath Totaldea={item.TotalDeaths}/>
+                            <Newrecover Newrecov={item.NewRecovered}/>
+                            <Totalrecover Totalrecov={item.TotalRecovered}/>
+                        </tr>
+                    ))}
+                        
+                    </tbody>
+                </table>
             </div>
         )
     }
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             items: [],
-//             isLoaded: false,
-//         }
-//     }
-// componentDidMount() {
-//     fetch('https://api.covid19api.com/summary?fbclid=IwAR0uoH6cU95rR1X8eiYo7iUwWz0bVGViIjc4Hx8J8o36idD48kD_VflcOyg')
-//     .then(res => res.json())
-//     .then(json => {
-//         this.setState({
-//             isLoaded:true,
-//             items: json,
-//         })
-//     });
-// }
-// render() {
-//     var {isLoaded , items} = this.state;
-//         if(!isLoaded){
-//             return<div>Loading...</div>;
-//         }
-//         else {
-//             return (
-//                 <div className="w-full flex-col pb-10 bg-red-600">
-//                     <div className="flex-col justify-center pt-2 sm:pt-4">
-//                         <div className="flex justify-center">
-//                             {console.log(items.Countries[0].Country)}
-//                             545454545454
-//                         </div>
-//                     </div>
-//                 </div>
-                
-//             );
-//         }
-    
-// }
 }
 
 export default FetchC
